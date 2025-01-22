@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: imda-jerome/testing-workflows@dev-main # Replace with your repository link
+        uses: imda-jerome/testing-workflows/hello-world-docker/@dev-main # Replace with your repository link
         with:
           first-name: ${{ github.event.inputs.first-name }}
           last-name: ${{ github.event.inputs.last-name }}
