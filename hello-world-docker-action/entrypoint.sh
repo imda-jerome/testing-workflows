@@ -14,4 +14,4 @@ echo "combined-greeting=$combined_greeting" >> $GITHUB_OUTPUT
 test_assets="$4"
 echo "combined-greeting=$test_assets" >> $GITHUB_OUTPUT
 
-echo "done"
+echo "done" 
