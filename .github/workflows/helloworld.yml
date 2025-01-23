@@ -1,0 +1,43 @@
+on:
+    workflow_dispatch:  # Enables manual triggering from the GitHub UI
+      inputs:
+        first-name:  # Define input for first name
+          description: 'First name of the person to greet'
+          required: true
+          default: 'Mona'
+        last-name:  # Define input for last name
+          description: 'Last name of the person to greet'
+          required: true
+          default: 'the Octocat'
+        title:  # Define input for title
+          description: 'Title of the person to greet'
+          required: false
+          default: 'Dr.'
+        age:  # Define input for age
+          description: 'Age of the person to greet'
+          required: false
+          default: '42'
+  
+  jobs:
+    hello_world_job:
+      runs-on: ubuntu-latest
+      name: A job to say hello
+      steps:
+        - name: debugging files
+          id: debug
+          run: ls -l
+          
+        - name: Hello world action step
+          id: public-hello
+          uses: actions/hello-world-docker-action@v2
+          with:
+            who-to-greet: 'Mona the Octocat'
+  
+        - name: Hello world action step
+          id: hello
+          uses: imda-jerome/testing-workflows/hello-world-docker-action@main # Replace with your repository link
+          with:
+            first-name: ${{ github.event.inputs.first-name }}
+            last-name: ${{ github.event.inputs.last-name }}
+            title: ${{ github.event.inputs.title }}
+            age: ${{ github.event.inputs.age }}

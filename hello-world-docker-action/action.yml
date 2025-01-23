@@ -1,0 +1,33 @@
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+  title:  # new input
+    description: 'Title of the person to greet'
+    required: false
+    default: 'Mr./Ms.'
+  age:  # new input
+    description: 'Age of the person to greet'
+    required: false
+    default: 'Unknown'
+  assets:  # new input
+    description: 'Dictionary of names and their values'
+    required: true
+    default: '{"asset1": "value1", "asset2": "value2"}'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+  combined-greeting:  # new output
+    description: 'A combined string of title, who-to-greet, and age'
+runs:
+  using: 'docker'
+  image: 'hello-world:linux'
+  args:
+    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.title }}
+    - ${{ inputs.age }}
+    - ${{ inputs.assets }}
