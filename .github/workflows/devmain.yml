@@ -28,6 +28,12 @@ jobs:
         run: ls -l
         
       - name: Hello world action step
+        id: public-hello
+        uses: actions/hello-world-docker-action@v2
+        with:
+          who-to-greet: 'Mona the Octocat'
+
+      - name: Hello world action step
         id: hello
         uses: imda-jerome/testing-workflows@main # Replace with your repository link
         with:
