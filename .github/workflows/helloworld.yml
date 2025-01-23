@@ -18,7 +18,7 @@ on:
           required: false
           default: '42'
   
-  jobs:
+jobs:
     hello_world_job:
       runs-on: ubuntu-latest
       name: A job to say hello
