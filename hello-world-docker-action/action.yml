@@ -26,6 +26,7 @@ outputs:
 runs:
   using: 'docker'
   image: 'docker://hello-world:linux'
+  entrypoint: echo hello
   args:
     - ${{ inputs.who-to-greet }}
     - ${{ inputs.title }}

@@ -33,7 +33,7 @@ jobs:
           with:
             who-to-greet: 'Mona the Octocat'
   
-        - name: Hello world action step
+        - name: using dockerhub
           id: hello
           uses: imda-jerome/testing-workflows/hello-world-docker-action@main # Replace with your repository link
           with:
