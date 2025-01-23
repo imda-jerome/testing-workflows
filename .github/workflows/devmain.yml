@@ -23,6 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
+      - name: debugging files
+        id: debug
+        run: ls -l
+        
       - name: Hello world action step
         id: hello
         uses: imda-jerome/testing-workflows@main # Replace with your repository link
