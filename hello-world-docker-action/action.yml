@@ -25,7 +25,7 @@ outputs:
     description: 'A combined string of title, who-to-greet, and age'
 runs:
   using: 'docker'
-  image: 'hello-world:linux'
+  image: 'docker://hello-world:linux'
   args:
     - ${{ inputs.who-to-greet }}
     - ${{ inputs.title }}
