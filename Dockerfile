@@ -1,11 +1,13 @@
 # Container image that runs your code
-FROM alpine:3.10
+FROM ubuntu:20.04
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
-COPY entrypoint.sh .
+COPY entrypoint.sh /entrypoint.sh
 
 # Set executable permissions for the entrypoint script
-RUN chmod +x entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+RUN echo $PATH
 
 RUN echo TEST
 
