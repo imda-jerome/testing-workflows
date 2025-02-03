@@ -25,8 +25,8 @@ outputs:
     description: 'A combined string of title, who-to-greet, and age'
 runs:
   using: 'docker'
-  image: 'docker://hello-world:linux'
-  entrypoint: sh
+  image: 'docker://imdajc/testing_github:latest'
+  entrypoint: sh entrypoint.sh
   args:
     - ${{ inputs.who-to-greet }}
     - ${{ inputs.title }}
