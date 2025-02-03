@@ -14,6 +14,6 @@ RUN echo TEST
 RUN ls -l
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
-ENTRYPOINT ["sh entrypoint.sh"]
+# ENTRYPOINT ["bash"]
 
-#CMD ["entrypoint.sh"]
+CMD ["bash entrypoint.sh"]
