@@ -68,3 +68,5 @@ jobs:
             title: ${{ github.event.inputs.title }}
             age: ${{ github.event.inputs.age }}
             who-to-greet: ${{ github.event.inputs.who-to-greet }}
+            args: |
+              echo "hello World"
