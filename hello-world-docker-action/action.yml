@@ -2,10 +2,6 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: false
-    default: 'dodo'
   title:  # new input
     description: 'Title of the person to greet'
     required: false
@@ -24,8 +20,6 @@ runs:
   image: 'docker://imdajc/testing_github:latest'
   # entrypoint: bash entrypoint.sh
   args:
-    - ${{ inputs.who-to-greet }}
     - ${{ inputs.title }}
     - ${{ inputs.age }}
-    - ${{ inputs.assets }}
   
