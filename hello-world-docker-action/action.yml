@@ -1,15 +1,15 @@
 # action.yml
 name: 'Hello World'
 description: 'Greet someone and record the time'
-inputs:
-  title:  # new input
-    description: 'Title of the person to greet'
-    required: false
-    default: 'Mr./Ms.'
-  age:  # new input
-    description: 'Age of the person to greet'
-    required: false
-    default: 'Unknown'
+# inputs:
+#   title:  # new input
+#     description: 'Title of the person to greet'
+#     required: false
+#     default: 'Mr./Ms.'
+#   age:  # new input
+#     description: 'Age of the person to greet'
+#     required: false
+#     default: 'Unknown'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -19,7 +19,7 @@ runs:
   using: 'docker'
   image: 'docker://imdajc/testing_github:latest'
   # entrypoint: bash entrypoint.sh
-  args:
-    - ${{ inputs.title }}
-    - ${{ inputs.age }}
+  # args:
+  #   - ${{ inputs.title }}
+  #   - ${{ inputs.age }}
   
