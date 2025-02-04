@@ -63,10 +63,10 @@ jobs:
           id: hello
           uses: imda-jerome/testing-workflows/hello-world-docker-action@main # Replace with your repository link
           with:
-            first-name: ${{ github.event.inputs.first-name }}
-            last-name: ${{ github.event.inputs.last-name }}
-            title: ${{ github.event.inputs.title }}
-            age: ${{ github.event.inputs.age }}
-            who-to-greet: ${{ github.event.inputs.who-to-greet }}
+            # first-name: ${{ github.event.inputs.first-name }}
+            # last-name: ${{ github.event.inputs.last-name }}
+            # title: ${{ github.event.inputs.title }}
+            # age: ${{ github.event.inputs.age }}
+            # who-to-greet: ${{ github.event.inputs.who-to-greet }}
             args: |
               echo "hello World"
