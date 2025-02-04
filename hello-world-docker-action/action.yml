@@ -22,7 +22,7 @@ outputs:
 runs:
   using: 'docker'
   image: 'docker://imdajc/testing_github:latest'
-  entrypoint: bash ./entrypoint.sh
+  # entrypoint: bash entrypoint.sh
   args:
     - ${{ inputs.who-to-greet }}
     - ${{ inputs.title }}
