@@ -5,7 +5,7 @@ inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
     required: true
-    default: 'World'
+    default: 'dodo'
   title:  # new input
     description: 'Title of the person to greet'
     required: false

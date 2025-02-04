@@ -63,3 +63,4 @@ jobs:
             last-name: ${{ github.event.inputs.last-name }}
             title: ${{ github.event.inputs.title }}
             age: ${{ github.event.inputs.age }}
+            who-to-greet: 'bobo'
