@@ -17,6 +17,10 @@ on:
           description: 'Age of the person to greet'
           required: false
           default: '42'
+        who-to-greet:
+          description: 'true name of the person to greet'
+          required: false
+          default: 'koko'
   
 jobs:
     docker:
@@ -63,4 +67,4 @@ jobs:
             last-name: ${{ github.event.inputs.last-name }}
             title: ${{ github.event.inputs.title }}
             age: ${{ github.event.inputs.age }}
-            who-to-greet: 'bobo'
+            who-to-greet: ${{ github.event.inputs.who-to-greet }}
