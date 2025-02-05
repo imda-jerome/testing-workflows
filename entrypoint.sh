@@ -16,5 +16,5 @@ echo "combined-greeting=$test_assets" >> $GITHUB_OUTPUT
 
 
 echo "trigger"
-echo "donez"  
+echo "donez1"  
 
