@@ -11,7 +11,7 @@ RUN echo $PATH
 
 RUN echo TEST
 
-RUN ls -l
+RUN ls -la
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 # ENTRYPOINT ["bash"]
